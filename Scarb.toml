@@ -1,0 +1,24 @@
+[package]
+name = "erc404"
+version = "1.0.0"
+edition = "2023_01"
+cairo-version = "2.5.3"
+authors = ["zyriu <Zyriu@protonmail.com>"]
+description = "Cairo implementation of the ERC404 fungible NFT standard."
+repository = "https://github.com/zyriu/cairo-erc404"
+license = "Apache-2.0"
+keywords = ["starknet", "cairo", "contracts", "erc404"]
+
+[dependencies]
+alexandria_storage = { git = "https://github.com/keep-starknet-strange/alexandria.git" }
+openzeppelin = { git = "https://github.com/OpenZeppelin/cairo-contracts.git" }
+starknet = "2.5.3"
+
+[lib]
+
+[[target.starknet-contract]]
+sierra = true
+casm = false
+
+[tool.fmt]
+sort-module-level-items = true
